@@ -1,0 +1,150 @@
+footer {
+    background-color: #001D38;
+    @include center_flex();
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 0 20px 0;
+    p{
+      color: white;
+    }
+  .foot-container {
+    width: 65%;
+    display: flex;
+    gap: 90px;
+
+    .first{
+        display: flex;
+        flex-direction: column;
+        max-width: 25%;
+        gap: 30px;
+        color: white;
+        p{
+            width: 200px;
+            font-size: 15px;
+            color: #AAB1B7;
+        }
+        .div1 {
+            display: flex;
+            gap: 20px;
+            .text {
+              p {
+                color: gainsboro;
+                font-size: 12px;
+              }
+            }
+      
+            .icon {
+              @include center_flex();
+              font-size: 30px;
+              padding: 10px;
+              background-color: $second-color;
+              border-radius: 50%;
+            }
+            
+          }
+          ul{
+            display: flex;
+            gap: 10px;
+            color: #AAB1B7;
+            .icon-div{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50px;
+              height: 50px;
+              border: 1px solid #AAB1B7;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: 300ms;
+
+            }
+            .icon-div:hover{
+              background-color: $second-color;
+              color: white;
+            }
+          }
+
+    }
+    .company{
+color: white;
+      h6{
+        font-size: 20px;
+
+      }
+      ul{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+          cursor: pointer;
+          color: #AAB1B7;
+
+        }
+        li:hover{
+          color: white;
+        }
+      }
+    }
+    .category{
+      color: white;
+      h6{
+        font-size: 20px;
+
+      }
+      ul{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+          cursor: pointer;
+          color: #AAB1B7;
+
+        }
+        li:hover{
+          color: white;
+        }
+      }
+    }
+    .subscribe{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h6{
+        font-size: 20px;
+        color: white;
+      }
+      form{
+        position: relative;
+        
+      }
+      input{
+        width: 300px;
+        height: 50px;
+        background-color: inherit;
+        border: 1px solid #aab1b779;
+        border-radius: 5px;
+        color: #AAB1B7;
+        padding-left: 15px;
+       
+        
+
+      }.footer-button{
+        position: absolute;
+        top: 5px;
+        right:  60px;
+        @include button($second-color,100px,40px,$second-color);
+        cursor: pointer;
+      }
+      p{
+        color: #AAB1B7;
+      }
+    }
+  }
+
+
+
+
+  
+}

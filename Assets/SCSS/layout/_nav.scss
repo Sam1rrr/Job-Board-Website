@@ -1,0 +1,192 @@
+$primary-color: #001d38d3;
+$second-color: #00d461;
+@mixin center_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin button($bgcolor, $width, $height, $font-size) {
+  width: $width;
+  height: $height;
+  background-color: $bgcolor;
+  border-radius: 6px;
+  color: white;
+  font-weight: normal;
+  font-size: $font-size;
+  border: none;
+}
+nav {
+  width: 100vw;
+  @include center_flex();
+  background-color: $primary-color;
+  height: 78px;
+  position: fixed;
+  z-index: 2;
+  .nav-container {
+    width: 80%;
+    @include center_flex();
+    justify-content: space-between;
+    color: white;
+
+    .div1 {
+      display: flex;
+      gap: 20px;
+      .text {
+        p {
+          color: gainsboro;
+          font-size: 12px;
+        }
+      }
+
+      .icon {
+        @include center_flex();
+        font-size: 30px;
+        padding: 10px;
+        background-color: $second-color;
+        border-radius: 50%;
+      }
+    }
+    .div2 {
+      ul {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        li {
+          position: relative;
+          transition: 500ms;
+          i {
+            padding-left: 5px;
+            font-size: 11px;
+          }
+          .sub-list1 {
+            top: 70px;
+            display: none;
+            left: 0;
+            position: absolute;
+            width: 160px;
+            height: 130px;
+            background-color: white;
+            color: black;
+            ul {
+              @include center_flex();
+              flex-direction: column;
+            }
+          }
+          .sub-list2 {
+            top: 70px;
+            left: 0;
+            position: absolute;
+            display: none;
+            width: 160px;
+            height: 100px;
+            background-color: white;
+
+            color: black;
+            ul {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              padding: 10px 10px;
+            }
+          }
+        }
+        li:hover {
+          color: $second-color;
+          cursor: pointer;
+        }
+        .sub-hover1:hover {
+          .sub-list1 {
+            display: block;
+          }
+        }
+        .sub-hover2:hover {
+          .sub-list2 {
+            display: block;
+          }
+        }
+      }
+    }
+    .div3 {
+      @include center_flex();
+      gap: 20px;
+      cursor: pointer;
+      button {
+        @include button($second-color, 130px, 50px, 20px);
+        transition: 300ms;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: inherit;
+        color: $second-color;
+        border: 1px solid $second-color;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    .div1 {
+      justify-content: left;
+      align-items: start;
+      width: 100vw;
+    }
+    .div2 {
+      display: none;
+    }
+    .div3 {
+      display: none;
+      a {
+        display: none;
+      }
+      button {
+        display: none;
+      }
+    }
+    .menu {
+      display: flex;
+      width: 90vw;
+      height: 54px;
+      background-color: #4c4c4c;
+      align-items: center;
+      justify-content: right;
+      .bar {
+        margin-right: 20px;
+        text-align: center;
+        width: 90px;
+        height: 33px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .menu {
+    display: none;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+}

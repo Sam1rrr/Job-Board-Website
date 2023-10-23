@@ -1,0 +1,536 @@
+header {
+  background-image: url(https://preview.colorlib.com/theme/jobboard2/img/banner/banner.png.webp);
+  @include center_flex();
+  .about-site {
+    @include center_flex();
+    flex-direction: column;
+    align-items: start;
+    color: white;
+    h3 {
+      font-size: 26px;
+      font-weight: normal;
+    }
+    h2 {
+      font-size: 55px;
+    }
+    p {
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 30px;
+      @include button($second-color, 220px, 50px, 18px);
+      transition: 500ms;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: inherit;
+      border: 1px solid $second-color;
+      color: $second-color;
+    }
+  }
+  .image {
+    margin: 200px 0 0 150px;
+  }
+}
+#filter_section {
+  width: 100vw;
+  margin: 100px 0;
+  @include center_flex();
+  .container-first {
+    @include center_flex();
+    gap: 30px;
+    flex-direction: column;
+    .inputs {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 20px;
+      .input {
+        width: 300px;
+        height: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.301);
+        border-radius: 6px;
+        font-size: 18px;
+        padding-left: 10px;
+      }
+      .black {
+        color: rgba(0, 0, 0, 0.562);
+      }
+      button {
+        @include button($second-color, 300px, 50px, 18px);
+        color: white;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: inherit;
+        color: $second-color;
+        border: 1px solid $second-color;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      span {
+        font-size: 18px;
+        margin-right: 20px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        li {
+          border: 1px solid #0a8dff59;
+          color: #0a8cff;
+          font-size: 15px;
+          padding: 7px 15px;
+          @include center_flex();
+          border-radius: 8px;
+          transition: 300ms;
+          cursor: pointer;
+          font-weight: 500;
+        }
+        li:hover {
+          border: 1px solid #08569b;
+        }
+      }
+    }
+  }
+}
+
+#container-section {
+  width: 100vw;
+  @include center_flex();
+  flex-direction: column;
+  padding: 100px;
+  background-color: #f5f7fa;
+
+  .container-second {
+    @include center_flex();
+    flex-direction: column;
+    height: 100%;
+    gap: 50px;
+    align-items: start;
+
+    h3 {
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    .category-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+      gap: 40px;
+
+      .div {
+        background-color: white;
+        width: 240px;
+        height: 140px;
+        border-radius: 4px;
+        @include center_flex();
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding-left: 10px;
+        cursor: pointer;
+        transition: 500ms;
+        a {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        p {
+          color: #aab1b7;
+          span {
+            background-color: #e6f3ff;
+            border-radius: 5px;
+            color: #0a8cff;
+            padding: 5px 15px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .div:hover {
+        border: 1px solid $second-color;
+        a {
+          color: $second-color;
+        }
+      }
+    }
+  }
+}
+
+#job-list-section {
+  background-color: #f5f7fa;
+  width: 100vw;
+  @include center_flex();
+  .job-container {
+    width: 57%;
+    .head {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #head-button {
+        @include button(inherit, 180px, 50px, $second-color);
+        color: $second-color;
+        border: 1px solid $second-color;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      #head-button:hover {
+        background-color: $second-color;
+        color: white;
+      }
+      h5 {
+        font-size: 38px;
+        font-weight: normal;
+      }
+    }
+    .list-container {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto auto;
+      gap: 20px;
+      .list {
+        border-radius: 5px;
+
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        transition: 500ms;
+        .part1 {
+          display: flex;
+          align-items: center;
+
+          .part1-image {
+            background-color: #f5f7fa;
+            padding: 14px 20px;
+            border-radius: 3px;
+          }
+          .part1-content {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            a {
+              font-size: 24px;
+              transition: 300ms;
+              cursor: pointer;
+            }
+            a:hover {
+              color: $second-color;
+            }
+            .content-text {
+              display: flex;
+              gap: 30px;
+              color: #aab8d0;
+            }
+          }
+        }
+        .part2 {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 14px;
+            text-align: end;
+          }
+          .icons {
+            display: flex;
+            gap: 20px;
+
+            .fa-heart {
+              color: #00d363;
+              background: #effdf5;
+              padding: 10px 12px;
+              border-radius: 3px;
+            }
+            .fa-heart:hover {
+              background-color: $second-color;
+              color: white;
+              transition: 300ms;
+              cursor: pointer;
+            }
+          }
+          button {
+            @include button($second-color, 120px, 40px, white);
+            transition: 300ms;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: inherit;
+            color: $second-color;
+            border: 1px solid $second-color;
+          }
+        }
+      }
+      .list:hover {
+        border: 1px solid $second-color;
+      }
+    }
+  }
+}
+#slider-section {
+  background-color: #f5f7fa;
+  width: 100vw;
+  padding-top: 80px;
+  @include center_flex();
+  flex-direction: column;
+
+  .slider-container {
+    h5 {
+      font-size: 40px;
+      font-weight: 400;
+      margin-bottom: 50px;
+    }
+    width: 64%;
+    margin-top: 50px;
+    @include center_flex();
+    flex-direction: column;
+  }
+  .image-container {
+    background-color: whitesmoke;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    .div {
+      @include center_flex();
+      flex-direction: column;
+      padding: 30px 40px;
+      border-radius: 3px;
+      background-color: white;
+
+      gap: 10px;
+      position: relative;
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      a:hover {
+        color: $second-color;
+      }
+      span {
+        color: gray;
+      }
+      .arrw {
+        position: absolute;
+        top: 50%;
+        color: white;
+        background-color: rgba(10, 140, 255, 0.1);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #0a8cff;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      .left-arrow {
+        position: absolute;
+        left: -15px;
+      }
+      .right-arrow {
+        right: -15px;
+      }
+      .arrw:hover {
+        background-color: rgba(10, 141, 255, 0.404);
+        color: white;
+      }
+    }
+  }
+}
+#company-section {
+  width: 100vw;
+  padding: 100px;
+  background-color: #f5f7fa;
+  @include center_flex();
+  .company-container {
+    .company-content {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 40px;
+
+      .div {
+        @include center_flex();
+        background-color: white;
+        width: 240px;
+        height: 200px;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding-left: 10px;
+        cursor: pointer;
+        transition: 500ms;
+        .part1-image {
+          background-color: #f5f7fa;
+          padding: 14px 20px;
+          border-radius: 4px;
+        }
+        a {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        p {
+          color: #aab1b7;
+          span {
+            background-color: #e6f3ff;
+            border-radius: 5px;
+            color: #0a8cff;
+            padding: 5px 15px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .head {
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #head-button {
+        @include button(inherit, 180px, 50px, $second-color);
+        color: $second-color;
+        border: 1px solid $second-color;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      #head-button:hover {
+        background-color: $second-color;
+        color: white;
+      }
+      h5 {
+        font-size: 38px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+#blue-job-section {
+  width: 100vw;
+  background-color: #2b9bff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 116px 0px;
+
+  .blue-job-container {
+    max-width: 60%;
+    display: flex;
+    gap: 100px;
+
+    .look {
+      color: white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h6 {
+        font-size: 35px;
+        font-weight: normal;
+      }
+
+      button {
+        @include button($second-color, 130px, 50px, white);
+        font-size: 18px;
+        cursor: pointer;
+        transition: 300ms;
+      }
+      button:hover {
+        background-color: inherit;
+        color: $second-color;
+        border: 1px solid $second-color;
+      }
+    }
+  }
+}
+#testimonial {
+  @include center_flex();
+  padding: 60px;
+
+  .test-container {
+    max-width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    gap: 50px;
+
+    .image {
+      max-width: 228px;
+      height: 228px;
+      border-radius: 50%;
+      position: relative;
+      img {
+        object-fit: cover;
+      }
+      .image-icon {
+        position: absolute;
+        top: 70%;
+        left: 80%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $second-color;
+        @include center_flex();
+        i {
+          font-size: 18px;
+          color: white;
+        }
+      }
+    }
+    .text{
+      max-width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      font-weight: 500;
+      font-size: 18px;
+      color: rgb(71, 71, 71);
+      span{
+        color: gray;
+      }
+    }
+    .icons{
+      height: 200px;
+
+.arrw {
+      color: white;
+      background-color: rgba(10, 140, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #0a8cff;
+      transition: 300ms;
+      cursor: pointer;
+      margin-top: 30px;
+
+
+    }
+    .left-arrow {
+      position: absolute;
+    }
+    .right-arrow {
+      right: -15px;
+    }
+    .arrw:hover {
+      background-color: rgba(10, 141, 255, 0.404);
+      color: white;
+    }
+  }
+  }
+}
